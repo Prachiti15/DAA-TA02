@@ -87,3 +87,21 @@ For Ascending input:Testcase01:
 ![image](https://user-images.githubusercontent.com/91412980/203615400-fe50b507-de54-4d7d-b442-6fd6395d924b.png)
 Here we can see that all elements from the array are inserted in the deque. None of the element gets ignored as every next element is greater than the previous element which ultimately satisfies the conditions.
 
+For Descending input:Testcase02: 
+![image](https://user-images.githubusercontent.com/91412980/203620852-ed2655b7-c25a-466e-9118-7845c78ae0f0.png)
+Here we can see that only 1st element of the array is inserted and rest all are ignored as the input is descending, thus all the other elements are less than the 1st element and they are getting ignored.
+
+For Random input:Testcase03: 
+![image](https://user-images.githubusercontent.com/91412980/203621372-7b73910a-82e4-4d4c-a1d6-6ef8e42237d4.png)
+Here we can see that in random input array the deque formed did not have number of elements equal to number of elements in the array and the deque was firstly decreasing and then is increasing(changed across the 1st element of the array).
+
+To modify it such that all the elements of the array can be the part of the deque can be simply inserting them in Front-Rear-Front-Rear.. trend 
+```
+Example: array=[5,6,4,8,3]
+so 5 will get inserted in front ==> F-> 5 <-R
+then 6 will be inserted at the rear end ==> F-> 5 ,6 <-R
+then 4 will be inserted at the front end ==> F-> 4, 5 ,6 <-R
+then 8 will be inserted at the rear end ==> F-> 4, 5 ,6 ,8 <-R
+then 3 will be inserted at the front end ==> F-> 3, 4, 5 ,6 ,8 <-R
+```
+
